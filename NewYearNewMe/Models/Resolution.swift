@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Resolution : Identifiable, Codable {
+    let id: UUID
+    var title: String
+    var isCompleted: Bool
+    let createdAt: Date
+}

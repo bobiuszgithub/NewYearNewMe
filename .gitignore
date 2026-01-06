@@ -1,0 +1,21 @@
+# Xcode
+DerivedData/
+*.xcuserstate
+*.xcuserdata/
+
+# SwiftPM
+.build/
+
+# Assets (DO NOT COMMIT)
+*.usdz
+*.dae
+*.fbx
+*.blend
+*.scn
+
+# Audio / large binaries
+*.wav
+*.mp3
+
+# macOS
+.DS_Store

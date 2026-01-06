@@ -5,26 +5,42 @@ struct HomeView: View {
     @State private var newResolution = ""
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
+
+           
+            MascotSceneView()
+                .frame(height: 250)
+                .background(Color(.systemBackground))
+
+            Divider()
+
+     
             List {
-                ForEach(vm.resolutions) { res in
+                ForEach(vm.resolutions) { resolution in
                     HStack {
-                        Text(res.title)
+                        Text(resolution.title)
+                            .font(.body)
+
                         Spacer()
-                        Image(systemName: res.isCompleted ? "checkmark.circle.fill" : "circle")
+
+                        Image(systemName: resolution.isCompleted
+                              ? "checkmark.circle.fill"
+                              : "circle")
+                            .foregroundColor(resolution.isCompleted ? .green : .gray)
                             .onTapGesture {
-                                vm.toggle(res)
+                                vm.toggle(resolution)
                             }
                     }
                 }
             }
 
+           
             HStack {
                 TextField("New resolution…", text: $newResolution)
                     .textFieldStyle(.roundedBorder)
 
                 Button("Add") {
-                    guard !newResolution.isEmpty else { return }
+                    guard !newResolution.trimmingCharacters(in: .whitespaces).isEmpty else { return }
                     vm.add(newResolution)
                     newResolution = ""
                 }
@@ -37,3 +53,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+
