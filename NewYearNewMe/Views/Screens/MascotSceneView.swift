@@ -80,7 +80,7 @@ struct MascotSceneView: UIViewRepresentable {
             guard let node = mascotNode else { return }
             
             let translation = gesture.translation(in: gesture.view)
-            let rotationAmount = Float(translation.x) * 0.01 // tweak sensitivity
+            let rotationAmount = Float(translation.x) * 0.01
             
             node.eulerAngles.y = lastY + rotationAmount
             

@@ -27,6 +27,10 @@ final class ResolutionViewModel: ObservableObject {
         resolutions.append(new)
         store.save(resolutions)
     }
+    func delete(at offsets: IndexSet) {
+        resolutions.remove(atOffsets: offsets)
+        store.save(resolutions)
+    }
 
     func toggle(_ resolution: Resolution) {
         guard let index = resolutions.firstIndex(where: { $0.id == resolution.id }) else { return }

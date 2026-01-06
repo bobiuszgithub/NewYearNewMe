@@ -16,11 +16,6 @@
 			path = NewYearNewMe;
 			sourceTree = "<group>";
 		};
-		C4C5DB4E2F0C240400BF4C71 /* Views */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Views;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +34,6 @@
 			children = (
 				C4C5DB342F0BE9BD00BF4C71 /* NewYearNewMe */,
 				C4C5DB332F0BE9BD00BF4C71 /* Products */,
-				C4C5DB4E2F0C240400BF4C71 /* Views */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +62,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				C4C5DB342F0BE9BD00BF4C71 /* NewYearNewMe */,
-				C4C5DB4E2F0C240400BF4C71 /* Views */,
 			);
 			name = NewYearNewMe;
 			packageProductDependencies = (

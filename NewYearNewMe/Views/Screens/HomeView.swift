@@ -6,8 +6,9 @@ struct HomeView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-
-           
+            HeaderView()
+            Spacer()
+            BottomActionsView()
             MascotSceneView()
                 .frame(height: 250)
                 .background(Color(.systemBackground))
@@ -32,9 +33,9 @@ struct HomeView: View {
                             }
                     }
                 }
+                .onDelete(perform: vm.delete)
             }
 
-           
             HStack {
                 TextField("New resolution…", text: $newResolution)
                     .textFieldStyle(.roundedBorder)
